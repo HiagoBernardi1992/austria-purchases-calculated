@@ -8,7 +8,7 @@
         <div>
           <mat-form-field appearance="fill">
             <mat-label>VAT Rate</mat-label>
-            <mat-select formControlName="rateVAT" (selectionChange)="rateChange($event)">
+            <mat-select formControlName="rateVAT" id="rateVAT" (selectionChange)="rateChange($event)">
               <mat-option *ngFor="let option of options" [value]="option">{{option}}%</mat-option>
             </mat-select>
           </mat-form-field>
@@ -16,15 +16,15 @@
         <div>
           <mat-form-field appearance="fill">
             <mat-label>Net Price</mat-label>
-            <input matInput appTwoDigitDecimaNumber formControlName="netPrice" (change)="valueChange(1)" #debounce>
+            <input matInput appTwoDigitDecimaNumber formControlName="netPrice" id="netPrice" (change)="valueChange(1)" #debounce>
           </mat-form-field>
           <mat-form-field appearance="fill">
             <mat-label>Gross Price</mat-label>
-            <input matInput appTwoDigitDecimaNumber formControlName="grossPrice" (change)="valueChange(2)" #debounce>
+            <input matInput appTwoDigitDecimaNumber formControlName="grossPrice" id="grossPrice" (change)="valueChange(2)" #debounce>
           </mat-form-field>
           <mat-form-field appearance="fill">
             <mat-label>VAT Amounts</mat-label>
-            <input matInput appTwoDigitDecimaNumber formControlName="amountsVAT" (change)="valueChange(3)" #debounce>
+            <input matInput appTwoDigitDecimaNumber formControlName="amountsVAT" id="amountsVAT" (change)="valueChange(3)" #debounce>
           </mat-form-field>
         </div>
       </form>
